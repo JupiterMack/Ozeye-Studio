@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Studio - AI Document Processing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vertical Studio</h1>
+            <p class="tagline">AI document processing for real estate professionals</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="hero">
+            <h2>Automate your document workflow</h2>
+            <p>Extract key information from contracts, automatically generate summaries, and never miss a critical clause again.</p>
+            
+            <div class="upload-container">
+                <h3>Try it now:</h3>
+                <form id="document-form">
+                    <div class="file-input">
+                        <input type="file" id="document" name="document" accept=".pdf">
+                        <label for="document">Upload a real estate contract (PDF)</label>
+                    </div>
+                    <button type="submit">Analyze Document</button>
+                </form>
+            </div>
+            
+            <div id="results" class="hidden">
+                <h3>Analysis Results</h3>
+                <div id="results-content"></div>
+            </div>
+        </section>
+        
+        <section class="waitlist">
+            <h2>Join our waitlist</h2>
+            <p>Get early access to our full suite of AI tools for real estate professionals.</p>
+            
+            <form id="waitlist-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Join Waitlist</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vertical Studio. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Placeholder JavaScript - we'll implement real functionality tomorrow
+        document.getElementById('document-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show a placeholder result
+            const results = document.getElementById('results');
+            const content = document.getElementById('results-content');
+            
+            results.classList.remove('hidden');
+            content.innerHTML = `
+                <div class="analysis-result">
+                    <h4>Document Analysis</h4>
+                    <p>Document type: Real Estate Purchase Agreement</p>
+                    
+                    <h5>Key Dates</h5>
+                    <ul>
+                        <li>Closing Date: December 15, 2025</li>
+                        <li>Inspection Deadline: November 15, 2025</li>
+                    </ul>
+                    
+                    <h5>Key Clauses</h5>
+                    <ul>
+                        <li>Financing Contingency</li>
+                        <li>Inspection Contingency</li>
+                        <li>Title Contingency</li>
+                    </ul>
+                </div>
+            `;
+        });
+        
+        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for joining our waitlist! We\'ll be in touch soon.');
+        });
+    </script>
+</body>
+</html>

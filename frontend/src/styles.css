@@ -1,0 +1,172 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fafb;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #1a365d;
+    color: white;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+.tagline {
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    padding: 3rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+}
+
+/* File upload */
+.upload-container {
+    margin: 2rem 0;
+}
+
+.file-input {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.file-input input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-input label {
+    display: block;
+    padding: 1rem;
+    background: #e2e8f0;
+    border: 2px dashed #cbd5e0;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.file-input label:hover {
+    background: #edf2f7;
+}
+
+button {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+/* Results area */
+.hidden {
+    display: none;
+}
+
+#results {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f0f9ff;
+    border-radius: 4px;
+    border-left: 4px solid #3182ce;
+}
+
+.analysis-result ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Waitlist form */
+.waitlist form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.waitlist input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.waitlist button {
+    border-radius: 0 4px 4px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1a365d;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .waitlist form {
+        flex-direction: column;
+    }
+    
+    .waitlist input {
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+    }
+    
+    .waitlist button {
+        border-radius: 4px;
+    }
+}
